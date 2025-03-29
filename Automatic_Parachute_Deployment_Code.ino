@@ -12,7 +12,7 @@ float initialPressure_HPA = 1013.25; // Placeholder for initial pressure
 float altitudeOffset = 0.0; // Offset to zero the altitude
 const int numReadings = 20; // Number of readings for averaging
 const int servoPin = 3; // Change to D3 for servo control
-const float deployThreshold = 0.5; // Altitude threshold for deployment in meters
+const float deployThreshold = 61; // Altitude threshold for deployment in meters
 
 enum State {
   WAITING_FOR_THRESHOLD_CROSS,
@@ -111,5 +111,5 @@ void loop() {
       break;
   }
 
-  delay(15); // Match the sensor's reading rate of 200 Hz (5 milliseconds per reading)
+  delay(5); // Match the sensor's reading rate of 200 Hz (5 milliseconds per reading)
 }
